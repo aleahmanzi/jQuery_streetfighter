@@ -6,8 +6,46 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
+<style>
+body { background: black; }
+.main_body {  background: white; margin-top: 110px; padding-left: 100px; min-width: 1200px; height: 500px; position: relative; z-index: 1; }
+.ryu_pics img { width: 659px; height: 494px; }
+.ryu_toss img { display: none; }
+.ryu_ready img { display: none; }
+.key_down img { display: none; }
+.hadouken, .ryu-ready, .ryu_pose, .ryu_toss, .keydown{ background-repeat: none; }
+
+.fire_wrap { width: 156px; height: 90px; float: left; position: absolute; z-index: 10; outline: 0px solid red; display: none; top: 167px; left: 580px; }
+.toss_text { position: absolute; top: 50px; left: 600px; font-size: 40px; }
+.pose_text { position: absolute; top: 250px; left: 700px; font-size: 40px; }
+
+</style>
 <body>
+
+  <div class="main_body">
+  	<p class="toss_text">Click on Ryu to<br /> make him throw a<br />Hadouken.</p>
+  	<p class="pose_text">Press and hold<br />down the "x" key<br />to make him strike<br />his cool pose!</p>
+
+  <audio id="fire_sound" src="../jQuery_streetfighter/sound/hadouken.mp3"></audio>
+
+   <div class="ryu_pics">
 	
+	<div class="ryu_pose"><img src="../jQuery_streetfighter/pics/ryu_pose.png" alt="ryu_pose">
+	</div>
+
+    <div class="ryu_ready"><img src='../jQuery_streetfighter/pics/ryu-ready-position.gif' alt="ryu_fight"></div>
+
+	<div class="ryu_toss"><img src="../jQuery_streetfighter/pics/ryu-throwing-hadouken.png" alt="ryu_throwing"></div>
+    
+   </div>
+
+    <div class="fire_wrap"><img src="../jQuery_streetfighter/pics/hadouken.gif" alt="fire_pic">
+    </div>
+
+	<div class="key_down"><img src="../jQuery_streetfighter/pics/ryu-cool.gif" alt="key_gif"></div>
+
+  </div>
+
 	<script src="http://code.jquery.com/jquery.min.js"></script>
 	<script src="js/app.js"></script>
 </body>
