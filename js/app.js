@@ -28,13 +28,21 @@ $(document).ready(function(){
  		})
  	})
  
- $(document).keydown(function(event) {
-   if(event.which == 88); { 
-   	$(".ryu_ready img").hide();
+ $(document).keydown(function(e) {
+   if(e.keyCode == 88); { 
    	$(".key_down img").show();
+    $(".ryu_ready img").hide();
+    $(".ryu_pose img").hide();
+    $(".ryu_toss img").hide();
+
 
 	};
-});
+}).keyup(function(e){
+  if(e.keyCode == 88){
+    $(".key_down img").hide();
+    $(".ryu_ready img").show();
+  }
+ })
 
 function playHadouken () {
 	$('#fire_sound')[0].volume = 0.5;
